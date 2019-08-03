@@ -1,0 +1,58 @@
+### select calculation
+# gofr: radial/pair distribution function g(r)
+# sofq: static structure factor s(q)
+# dfc: calc for diffusion coefficient
+# lboo: local bond-orientational order parameter q/w
+# bacf: bond-angle correlation function G(r)
+# pofqw: bond-orientational probability distribution p(q)/p(w)
+# bofree: bond-orientational ( Landau ) free energy
+# csform: cluster's sharing formation
+# povoro: make trajectory animtion of voronoi cell
+###
+#mode: gofr sofq dfc lboo bacf pofqw bofree povoro csform
+mode: csform
+
+### specify compounds
+# calculate as total amount
+# spec: sp1 sp2
+# spec: sp1 sp3 sp4
+# e.g.out: (sp1+sp2,sp1+sp2),(sp1+sp2,sp1+sp3+sp4)
+#          (sp1+sp3+sp4,sp1+sp2),(sp1+sp3+sp4,sp1+sp3+sp4)
+spec: Fe Si P
+spec: O
+
+### sampling flame of trajectory
+# flame: f0 f1 df
+# if f0 = 0 the configuration in the POSCAR will be read
+# if f1 < f0, f1 = maximum number of iteration of XDATCAR
+###
+flame: 70001 75000 10
+#flame: 1 1 1
+
+#### sampling range and interval
+# rrange: r0 r1 dr
+# qrange: q0 q1 dq
+# qlrange: ql0 ql1 dql
+# wlrange: wl0 wl1 dwl
+# csrange: cs0 cs1 dcs
+###
+rrange: 0 7 1.0e-3
+qrange: 0 10 1.0e-3
+qlrange: 0 1.0 1.0e-4
+wlrange: -0.25 0.25 1.0e-4
+csrange: 0 1 1.0e-3
+
+# super cell: (2*trans+1)^3
+trans: 1
+
+# time step [ps]
+tstep: 1.0e-3
+
+# angular l-number to lboo bacf pofqw: l1 l2 ...
+# lcut to cut-off angular l-nummber
+#lnum: 0 1 2 3 4 5 6 7 8 9 10 11 12
+lnum: 0 2 4 6 12 
+lcut: 12
+
+# write out interval
+dump: 100

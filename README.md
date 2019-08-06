@@ -1,6 +1,6 @@
 # corder #
 
----
+***
 
 The corder ( correlation and order analyzor package ) was made, on July 17 2017, with the aim of analysis structures and its properties from the trajectory of the VASP's first-princiles molecular dynamics ( FPMD ) calculation.
 
@@ -14,7 +14,7 @@ The required files are follows:
 
 ### _dependencies_ ###
 
--
+--
 
 The corder performs with depends on these packages:
 
@@ -30,7 +30,7 @@ The corder performs with depends on these packages:
 
 ### _installation_ ###
 
--
+--
 
 Download and install:
 ```
@@ -46,7 +46,7 @@ export PREFIX=/path/to/install/location
 
 # Supporting methods #
 
----
+***
 
 The corder supports several geometric algorithms as follows:
 
@@ -64,7 +64,7 @@ The corder supports several geometric algorithms as follows:
 
 ### _pair correlation function_ ###
 
--
+--
 
 Correlations between each atom related to positions are directly calculated by
 
@@ -79,30 +79,30 @@ The <img src="https://latex.codecogs.com/gif.latex?r"> indicates radius between 
 
 ### _structure factor_ ###
 
--
+--
 
 
 ### _mean-squared displacement and velocity correlation_ ###
 
--
+--
 
 
 ### _local bond-orientational order parameter_ ###
 
--
+--
 
 ### _bond-angle correlation function_ ###
 
--
+--
 
 ### _bond-orientational probability distribution_ ###
 
--
+--
 
 ### _bond-orientational ( Landau ) free energy_ ###
 
--
+--
 
 ### _distrubution of cluster's sharing formations_ ###
 
--
+--
